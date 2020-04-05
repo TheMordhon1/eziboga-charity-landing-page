@@ -1,0 +1,115 @@
+/* Mobile */
+@media (max-width: 700px) {
+
+  // Header
+  header {
+    padding: 1em;
+
+    .logo img {
+      width: 120px;
+    }
+
+    .page p {
+      font-size: 1rem;
+    }
+
+  }
+
+  // Section TOP
+  .section-top {
+    min-height: 200px;
+    padding-top: 20px;
+
+    .play {
+      display: none;
+    }
+
+
+    .content {
+      position: static;
+      width: 100%;
+      margin: 20vh 0;
+      text-align: center;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+    }
+
+  }
+
+  // Section Stream
+
+  .section-stream {
+
+    .content {
+      max-height: 700px;
+      display: grid;
+      grid-template-columns: 1fr;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  // Carousel
+  .carousel-item {
+    h1 {
+      font-size: 1.7rem;
+    }
+  }
+
+
+  // Accordion
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    .accordion-container {
+      padding: 20px;
+
+      .header {
+
+        .icon {
+          display: flex;
+          align-items: center;
+          margin-top: 10px;
+          font-size: 30px !important;
+          justify-content: center;
+
+          .title {
+            font-weight: 500;
+            font-size: .5rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Contact
+  .contact-fixed {
+    bottom: 1.8em;
+    right: 1em;
+
+    img {
+      width: 60px;
+    }
+  }
+
+  // Footer
+  .small-footer {
+    margin-top: 30px;
+  }
+
+  footer p {
+    font-size: .8rem;
+  }
+}
