@@ -1,9 +1,10 @@
-$primary-color: #f8fafc;
-$secondary-color: #F0544B;
+$primary-color: #ffff;
+$secondary-color: #f0544b;
 $highligh-color: #383838;
-$text-color: #666;
+$text-color: rgb(136, 136, 136);
 $font-pbox: 1.2rem;
-
+$font-flex: "Oswald",
+sans-serif;
 
 * {
   box-sizing: border-box;
@@ -11,12 +12,17 @@ $font-pbox: 1.2rem;
   padding: 0;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: $text-color;
   font-size: 1rem;
   line-height: 1.6;
-  background: url(../img/bg-body.png);
+  background: url(../img/bg-body.png) center;
+  height: 100%;
 }
 
 /* Utilities */
@@ -26,13 +32,35 @@ h3 {
   margin-bottom: 10px;
 }
 
+.text-color {
+  color: #ececec;
+  margin-bottom: 30px;
+}
+
 a {
   text-decoration: none;
   color: $text-color;
 }
 
+.box {
+  padding: 2em;
+  box-shadow: 5px 5px 10px rgba($color: #333, $alpha: .1);
+  background: $primary-color;
+  margin-bottom: 4em;
+}
+
+.link {
+  color: royalblue;
+}
+
 ul {
   list-style: none;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: $highligh-color;
 }
 
 .btn {
@@ -46,12 +74,25 @@ ul {
   letter-spacing: 2px;
   font-weight: bold;
   font-size: 1rem;
-  margin-top: 10px;
 
+  @media (max-width: 990px) and (min-width: 700px) {
+    padding: 8px 10px;
+    width: 200px;
+  }
 }
 
-.btn:hover {
+.btn-footer {
+  padding: 8px 20px;
+  background: $secondary-color;
+  color: $primary-color;
+  font-weight: bold;
+}
+
+.btn:hover,
+.btn-footer:hover {
   transform: scale(0.98);
+  text-decoration: none;
+  color: $primary-color;
 }
 
 .primary-text {
@@ -67,19 +108,16 @@ ul {
   padding: 0 20px;
 }
 
-
-
 // Carousel
 .carousel {
   height: 450px;
   background: url(../img/carousel-img/bg-carousel.jpg);
   object-fit: cover;
   color: white;
-}
 
-
-.carousel p {
-  font-weight: 200;
+  p {
+    font-size: 1.2rem;
+  }
 }
 
 // Footer
@@ -93,7 +131,6 @@ ul {
   display: inline-block;
   margin-right: 15px;
 
-
   a {
     color: #666666;
     font-size: 16px;
@@ -104,7 +141,7 @@ ul {
     background-color: #f1f1f1;
     line-height: 35px;
     text-align: center;
-    transition: all .3s ease 0s;
+    transition: all 0.3s ease 0s;
 
     &:hover {
       background: #666;
@@ -112,7 +149,6 @@ ul {
     }
   }
 }
-
 
 .footer-widget-title-4 {
   color: $highligh-color;
@@ -138,8 +174,7 @@ ul {
 .footer-widget-content-4 {
   a {
     text-decoration: none;
-    transition: .4s;
-
+    transition: 0.4s;
 
     &:hover {
       position: relative;
@@ -149,7 +184,6 @@ ul {
 }
 
 .footer-widget-content-4 {
-
   li {
     &::before {
       background: url("../img/arrow.png") no-repeat scroll left 0px center;
@@ -176,9 +210,7 @@ ul {
       color: #333;
       opacity: 1;
     }
-
   }
-
 }
 
 .subscribe-form-4 form .email {
@@ -196,7 +228,6 @@ ul {
 }
 
 .subscribe-absolute {
-
   input {
     position: absolute;
     right: 0em;
@@ -219,7 +250,5 @@ ul {
     letter-spacing: 1px;
     line-height: 18px;
     margin: 0;
-
-
   }
 }
