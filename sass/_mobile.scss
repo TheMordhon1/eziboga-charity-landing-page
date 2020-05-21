@@ -1,6 +1,12 @@
 /* Mobile */
 @media (max-width: 700px) {
 
+
+  .btn {
+    padding: 8px 20px;
+    font-size: .7rem;
+  }
+
   // Header
   header {
     padding: 1em;
@@ -58,13 +64,83 @@
     }
   }
 
-  // Carousel
-  .carousel-item {
-    h1 {
-      font-size: 1.7rem;
+
+
+  // Path
+  .card {
+    position: relative;
+    margin-bottom: 30px;
+
+    .card-body {
+      padding: 2rem 1rem;
+      height: 220px;
+
+      img {
+        width: 80px;
+      }
+    }
+
+    .path {
+      background: url(../img/red.png);
+      background-size: cover;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: -1.5em;
+      left: -1em;
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
     }
   }
 
+
+  // NumberMatrix
+  .numbers {
+    padding-top: 60px;
+
+
+    .grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: " mid""topleft""botleft""topright""botright";
+    }
+
+
+    .number-item {
+      padding: 20px 0;
+      font-size: 1.4em;
+      text-align: center;
+      border: none;
+
+      &:nth-child(1) {
+        padding: 20px 0;
+      }
+
+      &:nth-child(2) {
+        border-radius: 0;
+      }
+
+      &:nth-child(3) {
+        border-radius: 0;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      h6 {
+        font-size: 1rem;
+      }
+    }
+  }
 
   // Accordion
   section {
@@ -76,20 +152,33 @@
     .accordion-container {
       padding: 20px;
 
+      .main-title {
+        font-size: 1.2rem;
+      }
+
+      .tell p {
+        font-size: 1rem;
+      }
+
       .header {
 
-        .icon {
-          display: flex;
-          align-items: center;
-          margin-top: 10px;
-          font-size: 30px !important;
-          justify-content: center;
-
-          .title {
-            font-weight: 500;
-            font-size: .5rem;
-          }
+        h2 {
+          font-weight: 500;
+          font-size: 1rem !important;
         }
+
+        .icon {
+          width: 30px;
+          height: 20px;
+          font-size: 1rem;
+          margin: 0 10px;
+        }
+      }
+
+
+
+      .text {
+        font-size: 1rem;
       }
     }
   }
@@ -97,10 +186,11 @@
   // Contact
   .contact-fixed {
     bottom: 1.8em;
-    right: 1em;
+    right: .5em;
 
     img {
-      width: 60px;
+      width: 50px;
+      height: 50px;
     }
   }
 
