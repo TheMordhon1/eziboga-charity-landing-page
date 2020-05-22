@@ -35,16 +35,41 @@
 }
 
 .swiper-slide {
+  background-image: url(../img/carousel-img/bg-carousel.jpg);
   background-position: center;
   background-size: cover;
+  position: relative;
+  box-shadow: 0 50px 70px rgba($color: #000000, $alpha: .3) 0 10px 10px rgba($color: #000000, $alpha: .1);
   display: flex;
+
+  &::after {
+    content: "";
+    background-image: inherit;
+    position: absolute;
+    width: inherit;
+    height: 100%;
+    bottom: -100%;
+    transform: scaleY(-1);
+    background-position: bottom;
+    background-size: cover;
+    opacity: .5;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    bottom: -100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, .3), #fff);
+    z-index: 1000;
+  }
 
   .entity-img {
     display: flex;
     width: 40%;
     height: 60%;
     margin: 5em 2em;
-
   }
 
   .content {
@@ -69,6 +94,18 @@
       line-height: 1.4;
       margin-bottom: 20px;
     }
+
+    .btn {
+      padding: 8px 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: bold;
+      font-size: .8rem;
+
+      &:hover {
+        transform: scale(0.98) !important;
+      }
+    }
   }
 }
 
@@ -90,7 +127,7 @@
 .swiper-container-horizontal {
   >.swiper-pagination-bullets {
     .swiper-pagination-bullet {
-      margin: 0 9px;
+      margin: 0 9px 10px;
       position: relative;
       width: 12px;
       height: 12px;
@@ -142,7 +179,7 @@
 
 @media(max-width:1023px) {
   .swiper-container {
-    height: 110vw;
+    height: 120vw;
 
     &:hover .swiper-button-prev,
     &:hover .swiper-button-next {

@@ -77,26 +77,21 @@ header {
   margin: 10em 0 3em;
 
   .content {
-    display: flex;
+    display: grid;
     max-height: 800px;
     width: 100%;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
 
     @media (max-width: 600px) {
       flex-direction: column;
     }
 
-    &>div {
+    >div {
       height: 500px;
-      width: 50%;
-      padding: 2em 4em;
-      background: $primary-color;
-      box-shadow: 4px 5px 20px rgba($color: #333, $alpha: 0.2);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      margin-right: 2em;
+      width: 100%;
+      box-shadow: 4px 5px 20px rgba($color: #333, $alpha: 0.4);
 
       @media (max-width: 800px) {
         width: 100%;
@@ -105,17 +100,23 @@ header {
     }
 
     &>div:nth-child(1) {
-      background: url(../img/help-img.jpg);
-      object-fit: cover;
+      background: url(../img/catalog/bagiboga.jpg);
+      background-size: cover;
       background-position: center;
-      text-align: center;
+      object-fit: cover;
+      width: 100%;
     }
 
     &>div:nth-child(2) {
-      background: url(../img/mitra-img.jpg);
-      object-fit: cover;
+      background: url(../img/catalog/donasimu.jpg);
+      background-size: cover;
       background-position: center;
-      text-align: center;
+    }
+
+    &>div:nth-child(3) {
+      background: url(../img/catalog/colabs.jpg);
+      background-size: cover;
+      background-position: center;
     }
 
     h2 {
@@ -144,6 +145,7 @@ section {
 
     .main-title {
       color: $highligh-color;
+      font-size: 2.5rem;
     }
 
     .tell p {

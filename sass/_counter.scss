@@ -1,5 +1,7 @@
 .numbers {
   padding: 40px 0;
+  display: flex;
+  flex-direction: column;
 
   .grid {
     width: 80%;
@@ -7,7 +9,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "topleft mid topright"
       "botleft mid botright";
-
+    margin-top: 50px;
   }
 
   .number-item {
@@ -17,7 +19,7 @@
     border: 5px solid #fff;
 
     &:nth-child(1) {
-      background: #333;
+      background: #161e21;
       grid-area: mid;
       padding: 0 1em;
       display: flex;
@@ -29,23 +31,23 @@
     &:nth-child(2) {
       grid-area: topleft;
       border-top-left-radius: 20px;
-      background: #162447;
+      background: #7b55a6;
     }
 
     &:nth-child(3) {
       grid-area: topright;
       border-top-right-radius: 40px;
-      background: #1f4068;
+      background: #04c0a6;
     }
 
     &:nth-child(4) {
       grid-area: botleft;
-      background: #1b1b2f;
+      background: #87cffd;
     }
 
     &:nth-child(5) {
       grid-area: botright;
-      background: #e43f5a;
+      background: #ff4b51;
     }
 
     h2 {
@@ -64,5 +66,9 @@
       justify-content: center;
       width: 100%;
     }
+  }
+
+  .nb {
+    margin: 20px 10px;
   }
 }
